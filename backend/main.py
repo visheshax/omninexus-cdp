@@ -126,6 +126,17 @@ class PersonalizationResponse(BaseModel):
 # API Routes
 # ---------------------------------------------------------------------------
 
+@app.get("/")
+async def serve_root():
+    """
+    Friendly root endpoint returning online API status. Prevents health check 404s.
+    """
+    return {
+        "status": "online",
+        "service": "OmniNexus CDP Personalisation Engine API",
+        "documentation": "/docs"
+    }
+
 @app.get("/api/health")
 async def health_check():
     """
