@@ -819,7 +819,7 @@
     let defaultBackendUrl = "http://localhost:8000";
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && window.location.protocol === "https:") {
       // Direct board-ready fallback: auto-detect and bind to secure production Render backend out-of-the-box
-      defaultBackendUrl = "https://omninexus-cdp-backend.onrender.com";
+      defaultBackendUrl = "https://omninexus-cdp.onrender.com";
     }
     let backendUrl = localStorage.getItem("omninexus_backend_url") || defaultBackendUrl;
     let cohortData = null;
