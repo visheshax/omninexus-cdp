@@ -866,7 +866,10 @@
     // Initialization
     window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("settings-api-url").value = backendUrl;
-      document.getElementById("hud-api-url").textContent = backendUrl;
+      const hudEl = document.getElementById("hud-api-url");
+      if (hudEl) {
+        hudEl.textContent = backendUrl;
+      }
       
       // Attempt to contact backend to check health
       checkBackendHealth();
@@ -920,7 +923,10 @@
       }
       backendUrl = inputVal;
       localStorage.setItem("omninexus_backend_url", backendUrl);
-      document.getElementById("hud-api-url").textContent = backendUrl;
+      const hudEl = document.getElementById("hud-api-url");
+      if (hudEl) {
+        hudEl.textContent = backendUrl;
+      }
       toggleSettingsModal();
       checkBackendHealth();
     }
