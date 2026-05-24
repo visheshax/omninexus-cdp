@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Heroicons (SVG Icons) -->
-  <script src="https://unpkg.com/@heroicons/dom@1.0.1"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #030712; /* Slate-950 */
+      background-color: #f8fafc; /* Slate-50: Crisp, corporate light background */
     }
     h1, h2, h3, h4, h5, h6, .brand-font {
       font-family: 'Outfit', sans-serif;
@@ -26,14 +24,14 @@
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0f172a;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #cbd5e1;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
+      background: #94a3b8;
     }
     /* Smooth Shimmer Effect */
     @keyframes shimmer {
@@ -45,7 +43,7 @@
       }
     }
     .shimmer {
-      background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+      background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
       background-size: 200% 100%;
       animation: shimmer 1.5s infinite linear;
     }
@@ -75,42 +73,42 @@
     }
   </script>
 </head>
-<body class="text-slate-100 min-h-screen flex flex-col antialiased">
+<body class="text-slate-700 min-h-screen flex flex-col antialiased">
 
   <!-- TOP HEADER -->
-  <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-40">
+  <header class="border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <!-- Brand Logo -->
-        <div class="h-9 w-9 rounded-lg bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-500/20">
+        <!-- Corporate Logo -->
+        <div class="h-9 w-9 rounded-lg bg-gradient-to-tr from-indigo-700 to-brand-500 flex items-center justify-center shadow-sm">
           <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
         <div>
-          <span class="text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
-            OmniNexus <span class="bg-gradient-to-r from-brand-400 to-indigo-400 bg-clip-text text-transparent font-extrabold text-sm px-1.5 py-0.5 rounded border border-indigo-500/30 bg-indigo-500/10">CDP</span>
+          <span class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-1.5">
+            OmniNexus <span class="bg-indigo-50 text-indigo-700 font-extrabold text-sm px-1.5 py-0.5 rounded border border-indigo-200">CDP</span>
           </span>
-          <p class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">Autonomous Credit Card Personalisation Engine</p>
+          <p class="text-[10px] text-slate-500 tracking-wider uppercase font-semibold">Autonomous Credit Card Personalisation Engine</p>
         </div>
       </div>
 
       <!-- Network and Settings status -->
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-3">
         <!-- Settings Gear Button -->
-        <button onclick="toggleSettingsModal()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition duration-200" title="API Settings">
+        <button onclick="toggleSettingsModal()" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition duration-200" title="API Settings">
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
         </button>
 
-        <div class="flex items-center space-x-2 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700">
+        <div class="flex items-center space-x-2 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span class="text-xs font-medium text-slate-300" id="network-status">Engine Connected</span>
+          <span class="text-xs font-semibold text-slate-700" id="network-status">Engine Connected</span>
         </div>
       </div>
     </div>
@@ -121,46 +119,46 @@
     
     <!-- SYSTEM SUMMARY HUD -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-      <div class="bg-slate-900/60 backdrop-blur border border-slate-800 p-4 rounded-xl flex items-center justify-between">
+      <div class="bg-white border border-slate-200/80 p-4 rounded-xl flex items-center justify-between shadow-sm">
         <div>
-          <p class="text-xs text-slate-400 uppercase font-semibold">Active Engine Model</p>
-          <p class="text-lg font-bold text-white mt-1">Gemini 2.5 Flash</p>
+          <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Active Engine Model</p>
+          <p class="text-base font-bold text-slate-900 mt-1">Gemini 2.5 Flash</p>
         </div>
-        <div class="bg-brand-500/10 p-2.5 rounded-lg border border-brand-500/20 text-brand-400">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-indigo-50 p-2 rounded-lg border border-indigo-100 text-indigo-600">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
         </div>
       </div>
-      <div class="bg-slate-900/60 backdrop-blur border border-slate-800 p-4 rounded-xl flex items-center justify-between">
+      <div class="bg-white border border-slate-200/80 p-4 rounded-xl flex items-center justify-between shadow-sm">
         <div>
-          <p class="text-xs text-slate-400 uppercase font-semibold">Compliance Mode</p>
-          <p class="text-lg font-bold text-emerald-400 mt-1">Autonomous Safe</p>
+          <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Compliance Mode</p>
+          <p class="text-base font-bold text-emerald-700 mt-1">Autonomous Safe</p>
         </div>
-        <div class="bg-emerald-500/10 p-2.5 rounded-lg border border-emerald-500/20 text-emerald-400">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-emerald-50 p-2 rounded-lg border border-emerald-100 text-emerald-600">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
         </div>
       </div>
-      <div class="bg-slate-900/60 backdrop-blur border border-slate-800 p-4 rounded-xl flex items-center justify-between">
+      <div class="bg-white border border-slate-200/80 p-4 rounded-xl flex items-center justify-between shadow-sm">
         <div>
-          <p class="text-xs text-slate-400 uppercase font-semibold">Simulated Audience Size</p>
-          <p class="text-lg font-bold text-white mt-1">5 Core Personas</p>
+          <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Simulated Audience Size</p>
+          <p class="text-base font-bold text-slate-900 mt-1">5 Core Personas</p>
         </div>
-        <div class="bg-indigo-500/10 p-2.5 rounded-lg border border-indigo-500/20 text-indigo-400">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-slate-50 p-2 rounded-lg border border-slate-200 text-slate-600">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         </div>
       </div>
-      <div class="bg-slate-900/60 backdrop-blur border border-slate-800 p-4 rounded-xl flex items-center justify-between">
+      <div class="bg-white border border-slate-200/80 p-4 rounded-xl flex items-center justify-between shadow-sm">
         <div>
-          <p class="text-xs text-slate-400 uppercase font-semibold">Service Connection</p>
-          <p class="text-lg font-bold text-slate-300 mt-1" id="hud-api-url">http://localhost:8000</p>
+          <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Service Connection</p>
+          <p class="text-xs font-bold text-slate-700 mt-1 font-mono" id="hud-api-url">http://localhost:8000</p>
         </div>
-        <div class="bg-slate-500/10 p-2.5 rounded-lg border border-slate-500/20 text-slate-400">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="bg-slate-50 p-2 rounded-lg border border-slate-200 text-slate-600">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
           </svg>
         </div>
@@ -168,76 +166,76 @@
     </div>
 
     <!-- CONTROL SUITE: DIRECTIVE INPUT & PRESETS -->
-    <section class="bg-slate-900/40 backdrop-blur border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
-      <!-- Ambient background glow -->
-      <div class="absolute -top-24 -left-24 w-72 h-72 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+      <!-- Ambient background decoration -->
+      <div class="absolute -top-24 -left-24 w-72 h-72 bg-indigo-50 rounded-full blur-3xl pointer-events-none"></div>
       
       <div class="relative flex flex-col lg:flex-row lg:space-x-8 space-y-6 lg:space-y-0">
         <!-- Input Column -->
         <div class="flex-grow space-y-4">
           <div>
-            <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              <svg class="h-5.5 w-5.5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <h2 class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2">
+              <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
               </svg>
               Strategic Credit Card Directive Console
             </h2>
-            <p class="text-slate-400 text-xs mt-1">Input your campaign segment rules. OmniNexus will build a synthetic targeted audience and write all creative copies autonomously.</p>
+            <p class="text-slate-500 text-xs mt-1">Input your campaign segment rules in plain English. OmniNexus will build a synthetic targeted audience and write all creative copies autonomously.</p>
           </div>
 
           <div class="relative">
             <textarea id="directive-input" rows="4" 
-              class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 transition duration-200 text-sm shadow-inner"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200 text-sm shadow-inner"
               placeholder="E.g., Target high-spend travel segments to cross-sell our premium airmiles card tier, or isolate high-revolver users who need a balance transfer card offer..."></textarea>
           </div>
 
           <!-- Presets -->
           <div class="space-y-2">
-            <p class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">Or inject pre-configured executive directives:</p>
+            <p class="text-[10px] text-slate-500 tracking-wider uppercase font-bold">Inject Executive Presets:</p>
             <div class="flex flex-wrap gap-2">
               <button onclick="injectPreset(1)" 
-                class="px-3 py-1.5 rounded-lg border border-slate-700/80 bg-slate-800/40 hover:bg-slate-800 text-xs text-slate-300 hover:text-white transition duration-200 flex items-center space-x-1.5">
-                <span class="h-2 w-2 rounded-full bg-indigo-400"></span>
+                class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-xs text-slate-700 font-semibold shadow-sm transition duration-200 flex items-center space-x-1.5">
+                <span class="h-2 w-2 rounded-full bg-indigo-600"></span>
                 <span>Airmiles Premium Cross-Sell</span>
               </button>
               <button onclick="injectPreset(2)" 
-                class="px-3 py-1.5 rounded-lg border border-slate-700/80 bg-slate-800/40 hover:bg-slate-800 text-xs text-slate-300 hover:text-white transition duration-200 flex items-center space-x-1.5">
-                <span class="h-2 w-2 rounded-full bg-yellow-400"></span>
+                class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-xs text-slate-700 font-semibold shadow-sm transition duration-200 flex items-center space-x-1.5">
+                <span class="h-2 w-2 rounded-full bg-amber-500"></span>
                 <span>0% Balance Transfer Switcher</span>
               </button>
               <button onclick="injectPreset(3)" 
-                class="px-3 py-1.5 rounded-lg border border-slate-700/80 bg-slate-800/40 hover:bg-slate-800 text-xs text-slate-300 hover:text-white transition duration-200 flex items-center space-x-1.5">
-                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>Luxury Dining & Dining Cashback</span>
+                class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-xs text-slate-700 font-semibold shadow-sm transition duration-200 flex items-center space-x-1.5">
+                <span class="h-2 w-2 rounded-full bg-emerald-600"></span>
+                <span>Luxury Dining Cashback</span>
               </button>
             </div>
           </div>
         </div>
 
         <!-- Call-to-action Column -->
-        <div class="lg:w-80 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slate-800 pt-6 lg:pt-0 lg:pl-8 space-y-4">
-          <div class="bg-slate-950/60 border border-slate-800/80 rounded-xl p-4 flex-grow space-y-3">
-            <div class="flex items-center space-x-2 text-xs font-semibold text-brand-400 uppercase tracking-wider">
+        <div class="lg:w-80 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slate-200 pt-6 lg:pt-0 lg:pl-8 space-y-4">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex-grow space-y-3">
+            <div class="flex items-center space-x-2 text-xs font-bold text-indigo-700 uppercase tracking-wider">
               <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               <span>Compliance Sandbox</span>
             </div>
-            <p class="text-[11px] text-slate-400 leading-relaxed">
+            <p class="text-[11px] text-slate-600 leading-relaxed font-medium">
               Every synthetic prompt passes structured validation. The engine strictly avoids exposing PII, matching strict regulatory requirements for Tier-1 Banks.
             </p>
-            <div class="flex items-center space-x-1.5 text-[10px] text-emerald-400 font-medium">
-              <svg class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            <div class="flex items-center space-x-1.5 text-[10px] text-emerald-600 font-bold">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
               </svg>
               <span>PII Masking Active</span>
             </div>
           </div>
 
           <button id="run-engine-btn" onclick="runAutonomousEngine()"
-            class="w-full py-4 px-6 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-brand-600/20 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center space-x-2">
-            <svg class="h-5 w-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            class="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <span>Initiate Synthesis</span>
           </button>
@@ -246,105 +244,105 @@
     </section>
 
     <!-- LOADING & STEPS HUD OVERLAY -->
-    <div id="loading-overlay" class="hidden bg-slate-900/90 border border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center space-y-6 relative overflow-hidden min-h-[400px]">
-      <div class="absolute inset-0 shimmer opacity-10 pointer-events-none"></div>
+    <div id="loading-overlay" class="hidden bg-white border border-slate-200 rounded-2xl p-8 flex flex-col items-center justify-center space-y-6 relative overflow-hidden min-h-[400px] shadow-sm">
+      <div class="absolute inset-0 shimmer opacity-30 pointer-events-none"></div>
       
-      <!-- Rotating Glow Ring -->
-      <div class="relative h-20 w-20 flex items-center justify-center">
-        <div class="absolute inset-0 rounded-full border-4 border-slate-800"></div>
-        <div class="absolute inset-0 rounded-full border-4 border-indigo-500 border-t-transparent animate-spin"></div>
-        <svg class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <!-- Spinner -->
+      <div class="relative h-16 w-16 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border-4 border-slate-100"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-indigo-600 border-t-transparent animate-spin"></div>
+        <svg class="h-7 w-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       </div>
 
-      <div class="text-center space-y-2 max-w-md">
-        <h3 class="text-lg font-bold text-white tracking-wide uppercase">CDP Synthesis Pipeline Engaged</h3>
-        <p class="text-xs text-slate-400" id="loading-step-text">Processing natural language command directive...</p>
+      <div class="text-center space-y-1.5 max-w-md">
+        <h3 class="text-md font-bold text-slate-900 tracking-wide uppercase">CDP Synthesis Pipeline Engaged</h3>
+        <p class="text-xs text-slate-500 font-medium" id="loading-step-text">Processing natural language command directive...</p>
       </div>
 
       <!-- Progressive Pipeline HUD -->
-      <div class="w-full max-w-lg border border-slate-800 bg-slate-950/60 rounded-xl p-4 space-y-3.5 text-xs text-slate-300">
+      <div class="w-full max-w-lg border border-slate-200 bg-slate-50 rounded-xl p-4 space-y-3 text-xs text-slate-700">
         <div class="flex items-center justify-between" id="step-0">
-          <div class="flex items-center space-x-2.5">
-            <span class="step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700">1</span>
+          <div class="flex items-center space-x-2.5 font-medium">
+            <span class="step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300">1</span>
             <span>Structured Prompt Parsing</span>
           </div>
-          <span class="step-status text-[10px] text-slate-500 font-mono tracking-wider">WAITING</span>
+          <span class="step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold">WAITING</span>
         </div>
         <div class="flex items-center justify-between" id="step-1">
-          <div class="flex items-center space-x-2.5">
-            <span class="step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700">2</span>
+          <div class="flex items-center space-x-2.5 font-medium">
+            <span class="step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300">2</span>
             <span>Gemini LLM Context Injection</span>
           </div>
-          <span class="step-status text-[10px] text-slate-500 font-mono tracking-wider">WAITING</span>
+          <span class="step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold">WAITING</span>
         </div>
         <div class="flex items-center justify-between" id="step-2">
-          <div class="flex items-center space-x-2.5">
-            <span class="step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700">3</span>
+          <div class="flex items-center space-x-2.5 font-medium">
+            <span class="step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300">3</span>
             <span>Simulating Synthetic Customer Personas (5 Cohorts)</span>
           </div>
-          <span class="step-status text-[10px] text-slate-500 font-mono tracking-wider">WAITING</span>
+          <span class="step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold">WAITING</span>
         </div>
         <div class="flex items-center justify-between" id="step-3">
-          <div class="flex items-center space-x-2.5">
-            <span class="step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700">4</span>
+          <div class="flex items-center space-x-2.5 font-medium">
+            <span class="step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300">4</span>
             <span>Hyper-Personalizing Omnichannel Copies</span>
           </div>
-          <span class="step-status text-[10px] text-slate-500 font-mono tracking-wider">WAITING</span>
+          <span class="step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold">WAITING</span>
         </div>
         <div class="flex items-center justify-between" id="step-4">
-          <div class="flex items-center space-x-2.5">
-            <span class="step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700">5</span>
+          <div class="flex items-center space-x-2.5 font-medium">
+            <span class="step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300">5</span>
             <span>Parsing Creative Tokens & Validation Schemas</span>
           </div>
-          <span class="step-status text-[10px] text-slate-500 font-mono tracking-wider">WAITING</span>
+          <span class="step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold">WAITING</span>
         </div>
       </div>
     </div>
 
     <!-- ERROR HUB -->
-    <div id="error-hub" class="hidden bg-rose-950/40 border border-rose-500/30 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-5">
-      <div class="bg-rose-500/10 p-3 rounded-lg border border-rose-500/20 text-rose-400">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div id="error-hub" class="hidden bg-rose-50 border border-rose-200 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-5 shadow-sm">
+      <div class="bg-rose-100 p-2.5 rounded-lg border border-rose-200 text-rose-600">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
         </svg>
       </div>
       <div class="flex-grow space-y-1">
-        <h3 class="text-md font-bold text-white uppercase tracking-wider">Engine Process Error</h3>
-        <p class="text-xs text-rose-300" id="error-message">Could not connect to the personalisation microservice. Make sure the backend server is running and the GEMINI_API_KEY is configured.</p>
+        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider">Engine Process Error</h3>
+        <p class="text-xs text-rose-700 font-medium" id="error-message">Could not connect to the personalisation microservice. Make sure the backend server is running and the GEMINI_API_KEY is configured.</p>
       </div>
-      <button onclick="dismissError()" class="px-4 py-2 bg-rose-500/10 hover:bg-rose-500/20 text-xs font-semibold text-rose-300 hover:text-white rounded-lg border border-rose-500/20 transition duration-200">
+      <button onclick="dismissError()" class="px-4 py-2 bg-rose-100 hover:bg-rose-200 text-xs font-bold text-rose-700 rounded-lg border border-rose-200 transition duration-200">
         Acknowledge
       </button>
     </div>
 
     <!-- MAIN DASHBOARD CONTENT SECTION -->
-    <div id="dashboard-results" class="hidden space-y-8 animate-fade-in">
+    <div id="dashboard-results" class="hidden space-y-8">
       
       <!-- AUDIENCE BUILDER ROW -->
-      <section class="bg-slate-900/40 backdrop-blur border border-slate-800 rounded-2xl p-6 space-y-4 relative overflow-hidden">
+      <section class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm relative overflow-hidden">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
           <div>
-            <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              <svg class="h-5.5 w-5.5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <h2 class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2">
+              <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
               </svg>
               Synthetic Audience Builder
             </h2>
-            <p class="text-slate-400 text-xs mt-0.5">Click any customer row to analyze their hyper-personalized CRM layouts and trigger dedicated creative assets.</p>
+            <p class="text-slate-500 text-xs mt-0.5">Click any customer row to analyze their hyper-personalized CRM layouts and trigger dedicated creative assets.</p>
           </div>
-          <div class="flex items-center space-x-2 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800">
-            <span class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">Active Cohort:</span>
-            <span class="text-xs text-indigo-300 font-bold" id="active-directive-label">Premium travel segment campaign</span>
+          <div class="flex items-center space-x-2 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
+            <span class="text-[10px] text-slate-500 font-bold tracking-wider uppercase">Active Cohort:</span>
+            <span class="text-xs text-indigo-700 font-bold" id="active-directive-label">Premium travel segment campaign</span>
           </div>
         </div>
 
         <!-- Table -->
-        <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-950/30">
+        <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">
           <table class="w-full text-left border-collapse">
             <thead>
-              <tr class="bg-slate-900/80 border-b border-slate-800 text-[10px] font-bold text-slate-400 tracking-wider uppercase">
+              <tr class="bg-slate-50 border-b border-slate-200 text-[10px] font-bold text-slate-500 tracking-wider uppercase">
                 <th class="py-3.5 px-4">Customer ID</th>
                 <th class="py-3.5 px-4">Demographics</th>
                 <th class="py-3.5 px-4">Preference Segment</th>
@@ -354,7 +352,7 @@
                 <th class="py-3.5 px-4 text-center">Action</th>
               </tr>
             </thead>
-            <tbody id="audience-table-body" class="divide-y divide-slate-800 text-xs text-slate-200">
+            <tbody id="audience-table-body" class="divide-y divide-slate-100 text-xs text-slate-700">
               <!-- Dynamically populated rows -->
             </tbody>
           </table>
@@ -365,53 +363,53 @@
       <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         <!-- LEFT PANEL: COPY BLOCK VIEWER (7 COLS) -->
-        <div class="lg:col-span-7 bg-slate-900/40 backdrop-blur border border-slate-800 rounded-2xl p-6 space-y-6 relative flex flex-col justify-between">
+        <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 space-y-6 relative flex flex-col justify-between shadow-sm">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <div>
-                <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                  <svg class="h-5.5 w-5.5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <h2 class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2">
+                  <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                   </svg>
                   Copy & Content Personalization
                 </h2>
-                <p class="text-slate-400 text-xs mt-0.5" id="personalisation-subheading">Personalization copies configured for Customer</p>
+                <p class="text-slate-500 text-xs mt-0.5" id="personalisation-subheading">Personalization copies configured for Customer</p>
               </div>
 
               <!-- VIEWMODE TOGGLE: Campaign vs Customer Specific -->
-              <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800">
+              <div class="flex bg-slate-100 p-1 rounded-lg border border-slate-200 shadow-inner">
                 <button id="toggle-personalized-btn" onclick="setViewMode('personalized')"
-                  class="px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-brand-600 text-white">
+                  class="px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-white text-indigo-700 shadow-sm border border-slate-200">
                   HYPER-CRM
                 </button>
                 <button id="toggle-campaign-btn" onclick="setViewMode('campaign')"
-                  class="px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-400 hover:text-slate-200">
+                  class="px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-500 hover:text-slate-900">
                   COHORT WIDE
                 </button>
               </div>
             </div>
 
             <!-- Email Display -->
-            <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-4.5 space-y-3">
-              <div class="flex items-center justify-between text-xs border-b border-slate-800/80 pb-2">
-                <div class="flex items-center space-x-2 font-semibold text-indigo-300">
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4.5 space-y-3">
+              <div class="flex items-center justify-between text-xs border-b border-slate-200 pb-2">
+                <div class="flex items-center space-x-2 font-bold text-indigo-700">
                   <svg class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <span>Omni-Channel Email Channel</span>
                 </div>
-                <button onclick="copyToClipboard('email-body-text', this)" class="text-slate-500 hover:text-white transition text-[10px] uppercase font-bold flex items-center space-x-1">
+                <button onclick="copyToClipboard('email-body-text', this)" class="text-slate-500 hover:text-indigo-600 transition text-[10px] uppercase font-bold flex items-center space-x-1">
                   <span>Copy Body</span>
                 </button>
               </div>
               <div class="space-y-2 text-xs">
                 <div>
-                  <span class="text-slate-400 font-semibold">Subject Line: </span>
-                  <span class="text-white font-bold" id="email-subject-val">Premium Lounge Access...</span>
+                  <span class="text-slate-500 font-bold">Subject Line: </span>
+                  <span class="text-slate-900 font-bold" id="email-subject-val">Premium Lounge Access...</span>
                 </div>
                 <div>
-                  <p class="text-slate-400 font-semibold mb-1">HTML Email Content:</p>
-                  <div id="email-body-text" class="bg-slate-900 border border-slate-800/80 rounded-lg p-3 text-slate-300 leading-relaxed font-mono whitespace-pre-wrap select-all text-[11px] max-h-48 overflow-y-auto">
+                  <p class="text-slate-500 font-bold mb-1">HTML Email Content:</p>
+                  <div id="email-body-text" class="bg-white border border-slate-200 rounded-lg p-3 text-slate-700 leading-relaxed font-mono whitespace-pre-wrap select-all text-[11px] max-h-48 overflow-y-auto shadow-inner">
                     Dear valued customer...
                   </div>
                 </div>
@@ -421,33 +419,33 @@
             <!-- Omnichannel grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <!-- Push block -->
-              <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-4.5 space-y-2">
-                <div class="flex items-center justify-between text-xs border-b border-slate-800/80 pb-2">
-                  <div class="flex items-center space-x-2 font-semibold text-yellow-300">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4.5 space-y-2">
+                <div class="flex items-center justify-between text-xs border-b border-slate-200 pb-2">
+                  <div class="flex items-center space-x-2 font-bold text-amber-600">
                     <svg class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                     </svg>
                     <span>Push Notification</span>
                   </div>
-                  <button onclick="copyToClipboard('push-val', this)" class="text-slate-500 hover:text-white transition text-[10px] uppercase font-bold">Copy</button>
+                  <button onclick="copyToClipboard('push-val', this)" class="text-slate-500 hover:text-indigo-600 transition text-[10px] uppercase font-bold">Copy</button>
                 </div>
-                <div id="push-val" class="text-xs text-slate-300 font-medium leading-relaxed italic select-all p-1">
+                <div id="push-val" class="text-xs text-slate-700 font-medium leading-relaxed italic select-all p-1">
                   Enjoy airline credits today.
                 </div>
               </div>
 
               <!-- SMS Block -->
-              <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-4.5 space-y-2">
-                <div class="flex items-center justify-between text-xs border-b border-slate-800/80 pb-2">
-                  <div class="flex items-center space-x-2 font-semibold text-emerald-300">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-4.5 space-y-2">
+                <div class="flex items-center justify-between text-xs border-b border-slate-200 pb-2">
+                  <div class="flex items-center space-x-2 font-bold text-emerald-700">
                     <svg class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                     <span>SMS Channel</span>
                   </div>
-                  <button onclick="copyToClipboard('sms-val', this)" class="text-slate-500 hover:text-white transition text-[10px] uppercase font-bold">Copy</button>
+                  <button onclick="copyToClipboard('sms-val', this)" class="text-slate-500 hover:text-indigo-600 transition text-[10px] uppercase font-bold">Copy</button>
                 </div>
-                <div id="sms-val" class="text-xs text-slate-300 font-medium leading-relaxed italic select-all p-1">
+                <div id="sms-val" class="text-xs text-slate-700 font-medium leading-relaxed italic select-all p-1">
                   Alert: Redeem your rewards point tier now.
                 </div>
               </div>
@@ -455,63 +453,63 @@
           </div>
 
           <!-- Bottom notification -->
-          <div class="pt-4 border-t border-slate-800 mt-6 flex items-center justify-between text-[11px] text-slate-400">
+          <div class="pt-4 border-t border-slate-200 mt-6 flex items-center justify-between text-[11px] text-slate-500">
             <span>Enterprise copy generator matches compliant bank templates.</span>
-            <span class="flex items-center text-emerald-400 font-semibold gap-1">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Checked by MarTech AI Validator
+            <span class="flex items-center text-emerald-600 font-bold gap-1">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Checked by MarTech AI Validator
             </span>
           </div>
         </div>
 
         <!-- RIGHT PANEL: DYNAMIC CREATIVE ASSET CARD (5 COLS) -->
         <div class="lg:col-span-5 flex flex-col space-y-4">
-          <div class="bg-slate-900/40 backdrop-blur border border-slate-800 rounded-2xl p-6 flex flex-col justify-between flex-grow">
+          <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between flex-grow shadow-sm">
             <div class="space-y-4">
               <div>
-                <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                  <svg class="h-5.5 w-5.5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <h2 class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2">
+                  <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   Creative Asset Placeholder
                 </h2>
-                <p class="text-slate-400 text-xs mt-0.5">Autonomous visual target asset based on the generated marketing token tag.</p>
+                <p class="text-slate-500 text-xs mt-0.5">Autonomous visual target asset based on the generated marketing token tag.</p>
               </div>
 
               <!-- Contextual Visual Box -->
-              <div class="relative bg-slate-950/80 border border-slate-800 rounded-xl overflow-hidden shadow-2xl min-h-[220px] max-h-[300px] flex items-center justify-center">
+              <div class="relative bg-slate-100 border border-slate-200 rounded-xl overflow-hidden shadow-inner min-h-[220px] max-h-[300px] flex items-center justify-center">
                 <!-- Fallback overlay or Image -->
                 <img id="creative-asset-img" src="" alt="Campaign creative asset" 
                   class="w-full h-full object-cover select-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out">
                 
                 <!-- Inner asset overlay details -->
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent pointer-events-none"></div>
                 
                 <!-- Center loader overlay inside image -->
-                <div id="image-shimmer" class="absolute inset-0 shimmer opacity-30"></div>
+                <div id="image-shimmer" class="absolute inset-0 shimmer opacity-50"></div>
 
                 <!-- Asset Tag Badge -->
                 <div class="absolute bottom-4 left-4 z-10 space-y-1.5">
                   <div class="flex items-center space-x-1.5">
-                    <span id="asset-token-badge" class="bg-indigo-600/90 text-white font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-indigo-400/20 backdrop-blur-sm shadow-md">
+                    <span id="asset-token-badge" class="bg-indigo-600 text-white font-extrabold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-indigo-400/20 backdrop-blur-sm shadow-md">
                       airplane
                     </span>
-                    <span id="asset-mode-badge" class="bg-slate-900/95 text-slate-300 font-semibold text-[10px] tracking-wide px-2 py-0.5 rounded border border-slate-700 backdrop-blur-sm">
-                      Unsplash Active API
+                    <span id="asset-mode-badge" class="bg-white/95 text-slate-800 font-bold text-[10px] tracking-wide px-2 py-0.5 rounded border border-slate-200 backdrop-blur-sm shadow-sm">
+                      Unsplash Premium
                     </span>
                   </div>
-                  <p class="text-white font-bold text-xs tracking-tight shadow-text drop-shadow" id="asset-desc-label">High-Flyer Premium Travel Segment Card Campaign</p>
+                  <p class="text-white font-bold text-xs tracking-tight shadow-text drop-shadow-md" id="asset-desc-label">High-Flyer Premium Travel Segment Card Campaign</p>
                 </div>
               </div>
             </div>
 
-            <div class="pt-4 border-t border-slate-800 mt-6 space-y-2 text-xs">
-              <div class="flex justify-between items-center text-slate-400">
+            <div class="pt-4 border-t border-slate-200 mt-6 space-y-2 text-xs text-slate-500">
+              <div class="flex justify-between items-center">
                 <span>Asset Source Resolution:</span>
-                <span class="text-slate-200 font-mono">1080p Web Curated</span>
+                <span class="text-slate-800 font-mono font-semibold">1080p Web Curated</span>
               </div>
-              <div class="flex justify-between items-center text-slate-400">
+              <div class="flex justify-between items-center">
                 <span>Visual Match Weight:</span>
-                <span class="text-emerald-400 font-bold">100% Core Correlation</span>
+                <span class="text-emerald-600 font-extrabold">100% Core Correlation</span>
               </div>
             </div>
           </div>
@@ -522,16 +520,16 @@
     </div>
 
     <!-- PRE-RUN INTRO STATE -->
-    <div id="intro-suite" class="bg-slate-900/20 border border-slate-800/80 rounded-2xl p-10 flex flex-col items-center justify-center text-center space-y-5 min-h-[350px]">
-      <div class="h-16 w-16 rounded-2xl bg-slate-900/80 border border-slate-700/80 flex items-center justify-center text-brand-400 shadow-md">
-        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div id="intro-suite" class="bg-white border border-slate-200 rounded-2xl p-10 flex flex-col items-center justify-center text-center space-y-5 min-h-[350px] shadow-sm">
+      <div class="h-14 w-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center text-indigo-600 shadow-sm">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       </div>
       <div class="space-y-2 max-w-lg">
-        <h3 class="text-lg font-bold text-white tracking-wide">Autonomous Engine Idle</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">
-          The credit card personalisation pipeline is ready. Write a strategic targeting directive in plain English above or choose one of our executive bank presets, then press <strong class="text-brand-400">Initiate Synthesis</strong> to generate compliance-safe customer profiles.
+        <h3 class="text-md font-bold text-slate-900 tracking-wide">Autonomous Engine Idle</h3>
+        <p class="text-xs text-slate-500 leading-relaxed font-medium">
+          The credit card personalisation pipeline is ready. Write a strategic targeting directive in plain English above or choose one of our executive bank presets, then press <strong class="text-indigo-600">Initiate Synthesis</strong> to generate compliance-safe customer profiles.
         </p>
       </div>
     </div>
@@ -539,27 +537,27 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-900 bg-slate-950 py-6 mt-12">
+  <footer class="border-t border-slate-200 bg-white py-6 mt-12">
     <div class="max-w-7xl mx-auto px-4 text-center space-y-2 text-xs text-slate-500">
-      <p class="font-medium">OmniNexus CDP | Autonomous Credit Card Personalisation Engine Suite</p>
+      <p class="font-bold text-slate-700">OmniNexus CDP | Autonomous Credit Card Personalisation Engine Suite</p>
       <p>&copy; 2026 Tier-1 Retail Bank MarTech Operations. Safe Sandbox Compliance mode.</p>
     </div>
   </footer>
 
   <!-- SETTINGS MODAL -->
-  <div id="settings-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 space-y-6 shadow-2xl relative">
-      <div class="absolute -top-12 -right-12 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+  <div id="settings-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+    <div class="bg-white border border-slate-200 rounded-2xl max-w-md w-full p-6 space-y-6 shadow-2xl relative">
+      <div class="absolute -top-12 -right-12 w-32 h-32 bg-indigo-50 rounded-full blur-2xl pointer-events-none"></div>
       
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <h3 class="text-md font-bold text-white uppercase tracking-wider flex items-center gap-2">
-          <svg class="h-5 w-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+          <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
           </svg>
           Microservice Settings
         </h3>
-        <button onclick="toggleSettingsModal()" class="text-slate-400 hover:text-white transition">
-          <svg class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button onclick="toggleSettingsModal()" class="text-slate-400 hover:text-slate-950 transition">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -567,19 +565,19 @@
 
       <div class="space-y-4 text-xs">
         <div class="space-y-1.5">
-          <label class="block text-slate-300 font-semibold">Backend Endpoint URL:</label>
+          <label class="block text-slate-700 font-bold">Backend Endpoint URL:</label>
           <input type="text" id="settings-api-url" 
-            class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-white font-mono placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500" 
+            class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-slate-800 font-mono placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" 
             placeholder="http://localhost:8000">
           <p class="text-[10px] text-slate-500">Configure to point to your hosted Render/local FastAPI endpoint.</p>
         </div>
       </div>
 
       <div class="flex justify-end space-x-3 pt-2">
-        <button onclick="toggleSettingsModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-lg font-medium text-xs transition duration-200">
+        <button onclick="toggleSettingsModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-bold text-xs transition duration-200">
           Cancel
         </button>
-        <button onclick="saveSettings()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg font-bold text-xs shadow shadow-brand-500/20 transition duration-200">
+        <button onclick="saveSettings()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-xs shadow transition duration-200">
           Save Settings
         </button>
       </div>
@@ -638,13 +636,13 @@
         const data = await res.json();
         if (data.status === "healthy") {
           netLabel.textContent = "Engine Connected";
-          netLabel.parentElement.classList.remove("border-rose-700/50", "bg-rose-500/10");
+          netLabel.parentElement.classList.remove("border-rose-300", "bg-rose-50");
           netLabel.parentElement.querySelector("span span").classList.remove("bg-rose-400");
           netLabel.parentElement.querySelector("span span").classList.add("bg-emerald-400");
           netLabel.parentElement.querySelector("span span:last-child").classList.remove("bg-rose-500");
           netLabel.parentElement.querySelector("span span:last-child").classList.add("bg-emerald-500");
-          netLabel.classList.add("text-slate-300");
-          netLabel.classList.remove("text-rose-400");
+          netLabel.classList.add("text-slate-700");
+          netLabel.classList.remove("text-rose-700");
         } else {
           setNetworkOffline();
         }
@@ -656,13 +654,13 @@
     function setNetworkOffline() {
       const netLabel = document.getElementById("network-status");
       netLabel.textContent = "Engine Offline";
-      netLabel.parentElement.classList.add("border-rose-700/50", "bg-rose-500/10");
+      netLabel.parentElement.classList.add("border-rose-200", "bg-rose-50");
       netLabel.parentElement.querySelector("span span").classList.remove("bg-emerald-400");
       netLabel.parentElement.querySelector("span span").classList.add("bg-rose-400");
       netLabel.parentElement.querySelector("span span:last-child").classList.remove("bg-emerald-500");
       netLabel.parentElement.querySelector("span span:last-child").classList.add("bg-rose-500");
-      netLabel.classList.remove("text-slate-300");
-      netLabel.classList.add("text-rose-400");
+      netLabel.classList.remove("text-slate-700");
+      netLabel.classList.add("text-rose-700");
     }
 
     // Modal Operations
@@ -689,9 +687,9 @@
       document.getElementById("directive-input").value = PRESETS[num];
       // small feedback effect
       const input = document.getElementById("directive-input");
-      input.classList.add("ring-2", "ring-indigo-500/50");
+      input.classList.add("ring-2", "ring-indigo-500/20");
       setTimeout(() => {
-        input.classList.remove("ring-2", "ring-indigo-500/50");
+        input.classList.remove("ring-2", "ring-indigo-500/20");
       }, 300);
     }
 
@@ -801,17 +799,17 @@
       const statusLabel = stepRow.querySelector(".step-status");
 
       if (state === "RUNNING") {
-        indicator.className = "step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-indigo-600 text-[10px] font-bold text-white border border-indigo-500 animate-pulse";
-        statusLabel.className = "step-status text-[10px] text-indigo-400 font-bold tracking-wider";
+        indicator.className = "step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-indigo-600 text-[10px] font-bold text-white border border-indigo-500 animate-pulse";
+        statusLabel.className = "step-status text-[10px] text-indigo-600 font-bold tracking-wider";
         statusLabel.textContent = "IN PROGRESS";
       } else if (state === "COMPLETED") {
-        indicator.className = "step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-emerald-500 text-[10px] font-bold text-white border border-emerald-400";
+        indicator.className = "step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-emerald-500 text-[10px] font-bold text-white border border-emerald-400";
         indicator.innerHTML = `
           <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
         `;
-        statusLabel.className = "step-status text-[10px] text-emerald-400 font-bold tracking-wider";
+        statusLabel.className = "step-status text-[10px] text-emerald-600 font-bold tracking-wider";
         statusLabel.textContent = "COMPLETED";
       }
     }
@@ -823,9 +821,10 @@
         const indicator = stepRow.querySelector(".step-indicator");
         const statusLabel = stepRow.querySelector(".step-status");
         
-        indicator.className = "step-indicator h-4.5 w-4.5 rounded-full flex items-center justify-center bg-slate-800 text-[10px] font-bold text-slate-400 border border-slate-700";
+        indicator.className = "step-indicator h-4 w-4 rounded-full flex items-center justify-center bg-slate-200 text-[10px] font-bold text-slate-600 border border-slate-300";
         indicator.textContent = i + 1;
-        statusLabel.className = "step-status text-[10px] text-slate-500 font-mono tracking-wider";
+        indicator.innerHTML = i + 1;
+        statusLabel.className = "step-status text-[10px] text-slate-400 font-mono tracking-wider font-bold";
         statusLabel.textContent = "WAITING";
       }
       document.getElementById("loading-step-text").textContent = "Processing natural language command directive...";
@@ -843,24 +842,24 @@
 
       cohortData.customers.forEach((cust, idx) => {
         // Formulate color indicators for churn risk score
-        let riskColor = "text-emerald-400 bg-emerald-500/10 border-emerald-500/20";
+        let riskColor = "text-emerald-700 bg-emerald-50 border-emerald-200";
         if (cust.churn_risk_score > 60) {
-          riskColor = "text-rose-400 bg-rose-500/10 border-rose-500/20";
+          riskColor = "text-rose-700 bg-rose-50 border-rose-200";
         } else if (cust.churn_risk_score > 30) {
-          riskColor = "text-yellow-400 bg-yellow-500/10 border-yellow-500/20";
+          riskColor = "text-amber-700 bg-amber-50 border-amber-200";
         }
 
         const row = document.createElement("tr");
         row.id = `cust-row-${idx}`;
-        row.className = "hover:bg-slate-900/60 transition cursor-pointer border-slate-800 select-none";
+        row.className = "hover:bg-slate-50 transition cursor-pointer border-slate-100 select-none";
         row.setAttribute("onclick", `selectCustomerRow(${idx})`);
         
         row.innerHTML = `
-          <td class="py-3 px-4 font-bold text-white tracking-wide">${cust.customer_id}</td>
+          <td class="py-3 px-4 font-bold text-slate-900 tracking-wide">${cust.customer_id}</td>
           <td class="py-3 px-4">
-            <div class="font-medium text-slate-200">Age: ${cust.age}</div>
-            <div class="text-[10px] text-slate-500 flex items-center gap-0.5">
-              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="font-bold text-slate-800">Age: ${cust.age}</div>
+            <div class="text-[10px] text-slate-500 flex items-center gap-0.5 font-medium">
+              <svg class="h-3 w-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
@@ -868,19 +867,19 @@
             </div>
           </td>
           <td class="py-3 px-4">
-            <span class="px-2.5 py-1 rounded bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-semibold text-[10.5px]">
+            <span class="px-2.5 py-1 rounded bg-indigo-50 border border-indigo-100 text-indigo-700 font-extrabold text-[10px] uppercase">
               ${cust.segment}
             </span>
           </td>
-          <td class="py-3 px-4 text-right font-bold text-white font-mono">£${cust.avg_spend.toLocaleString()}</td>
-          <td class="py-3 px-4 text-center font-semibold font-mono text-slate-300">${cust.utilisation_rate}%</td>
+          <td class="py-3 px-4 text-right font-bold text-slate-900 font-mono">£${cust.avg_spend.toLocaleString()}</td>
+          <td class="py-3 px-4 text-center font-bold font-mono text-slate-800">${cust.utilisation_rate}%</td>
           <td class="py-3 px-4 text-center">
-            <span class="px-2 py-0.5 rounded text-[10px] border font-bold ${riskColor}">
+            <span class="px-2.5 py-0.5 rounded text-[10px] border font-bold ${riskColor}">
               ${cust.churn_risk_score}% Churn Risk
             </span>
           </td>
           <td class="py-3 px-4 text-center">
-            <button class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded border border-slate-700 hover:border-slate-600 text-slate-300 transition duration-150">
+            <button class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-[10px] font-bold rounded border border-slate-200 text-slate-700 transition duration-150">
               Select Profile
             </button>
           </td>
@@ -902,13 +901,13 @@
         const row = document.getElementById(`cust-row-${idx}`);
         if (!row) return;
         if (idx === index) {
-          row.className = "bg-brand-600/10 border-l-2 border-l-brand-500 hover:bg-brand-600/15 transition cursor-pointer border-slate-800 select-none";
+          row.className = "bg-indigo-50/50 border-l-4 border-l-indigo-600 hover:bg-indigo-50/80 transition cursor-pointer border-slate-100 select-none";
           // Highlight button
-          row.querySelector("button").className = "px-3 py-1 bg-brand-600 hover:bg-brand-500 text-[10px] font-bold rounded border border-brand-500 text-white transition duration-150";
+          row.querySelector("button").className = "px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-[10px] font-bold rounded border border-indigo-700 text-white transition duration-150 shadow-sm";
           row.querySelector("button").textContent = "Selected";
         } else {
-          row.className = "hover:bg-slate-900/60 transition cursor-pointer border-slate-800 select-none";
-          row.querySelector("button").className = "px-3 py-1 bg-slate-800 hover:bg-slate-700 text-[10px] font-bold rounded border border-slate-700 hover:border-slate-600 text-slate-300 transition duration-150";
+          row.className = "hover:bg-slate-50 transition cursor-pointer border-slate-100 select-none";
+          row.querySelector("button").className = "px-3 py-1 bg-slate-100 hover:bg-slate-200 text-[10px] font-bold rounded border border-slate-200 text-slate-700 transition duration-150";
           row.querySelector("button").textContent = "Select Profile";
         }
       });
@@ -929,7 +928,7 @@
       // Swap titles
       const subheading = document.getElementById("personalisation-subheading");
       if (viewMode === 'personalized') {
-        subheading.innerHTML = `Hyper-Personalized CRM copy for profile <strong class="text-indigo-300 font-bold">${cust.customer_id}</strong> (${cust.segment})`;
+        subheading.innerHTML = `Hyper-Personalized CRM copy for profile <strong class="text-indigo-700 font-bold">${cust.customer_id}</strong> (${cust.segment})`;
       } else {
         subheading.innerHTML = `Unified campaign cohort copies (Global Segment Template)`;
       }
@@ -976,11 +975,11 @@
       const campBtn = document.getElementById("toggle-campaign-btn");
 
       if (mode === 'personalized') {
-        persBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-brand-600 text-white shadow";
-        campBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-400 hover:text-slate-200";
+        persBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-white text-indigo-700 shadow-sm border border-slate-200";
+        campBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-500 hover:text-slate-900";
       } else {
-        campBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-brand-600 text-white shadow";
-        persBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-400 hover:text-slate-200";
+        campBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 bg-white text-indigo-700 shadow-sm border border-slate-200";
+        persBtn.className = "px-2.5 py-1 text-[10px] font-bold rounded transition-all duration-200 text-slate-500 hover:text-slate-900";
       }
 
       updatePersonalisationCards();
@@ -993,10 +992,10 @@
         // Quick visual popup
         const originalText = btn.textContent;
         btn.textContent = "Copied!";
-        btn.classList.add("text-emerald-400");
+        btn.classList.add("text-emerald-600");
         setTimeout(() => {
           btn.textContent = originalText;
-          btn.classList.remove("text-emerald-400");
+          btn.classList.remove("text-emerald-600");
         }, 1500);
       });
     }
