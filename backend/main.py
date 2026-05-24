@@ -197,8 +197,13 @@ async def personalize_cohort(payload: PersonalizeRequest):
             "An airmiles premium customer should have high spend (e.g. £3000+) and low/medium utilization.\n"
             "4. Multi-Channel Copies: Write high-end, elegant copy that sounds exactly like a premium bank's marketing material. "
             "Ensure that push notifications are under 120 characters and SMS is under 160 characters.\n"
-            "5. Customer Hyper-Personalization: The individual customer profiles MUST have copy specifically customized for them, "
-            "referencing their location, age, or spend habits directly to demonstrate hyper-personalization capabilities in a CRM."
+            "5. BANK COMPLIANCE & PRIVACY SAFEGUARDS (CRITICAL RULE): Marketing copy must be professional, warm, aspirational, and value-focused. "
+            "To prevent the customer from feeling surveilled or 'spooked', you MUST NEVER explicitly mention exact private transaction figures, "
+            "specific monthly spend amounts (e.g. £4,500), exact utilization rates, or specific neighborhood locations (e.g. Mayfair, Soho) in the customer-facing copy. "
+            "Instead, use soft, lifestyle-aligned, and benefit-driven phrasing. For example: "
+            "Instead of 'Since you spend £4,500 on London dining', write 'As someone who enjoys premium dining and culinary experiences, you can now earn...' "
+            "Address them professionally by name (e.g., 'Mr. Davies'), but keep all backend financial tracking details and locations strictly out of the copy. "
+            "The tone must be welcoming and premium, never creepy or intrusive."
         )
 
         user_content = (
