@@ -2,11 +2,9 @@ services:
   - type: web
     name: omninexus-cdp-backend
     env: python
-    plan: free # Can be upgraded as needed
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
-        sync: false # Set this in the Render dashboard during deployment
-      - key: PORT
-        value: 10000
+        sync: false
